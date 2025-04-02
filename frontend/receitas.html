@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Receitas</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html">Chefs</a>
+        <a href="receitas.html">Receitas</a>
+        <h1>Receitas Cadastradas</h1>
+    </nav>
+
+    
+    <button id="addReceitaBtn">Adicionar Receitas</button>
+
+    <table id="ReceitasTable">
+        <thead>
+            <tr>
+                <th>Título</th>
+                <th>Descrição</th>
+                <th>Chef</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- As receitas serão listadas aqui via JS -->
+        </tbody>
+    </table>
+
+    <!-- Modal para adicionar/editar receitas -->
+    <div id="receitaModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modalTitleReceita">Adicionar receita</h2>
+            <form id="receitaForm">
+                <label for="TitleReceita">Título:</label>
+                <input type="text" id="TitleReceita" name="name" required>
+
+                <label for="description">Descrição:</label>
+                <input type="text" id="description" name="description" required>
+
+                <label for="chef">Chef:</label>
+                <select id="chef" name="chef" required>
+                    <!-- Os chefs serão carregados aqui via JS -->
+                </select>
+
+                <button type="submit" id="saveReceitaBtn">Salvar</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/receitas.js"></script>
+</body>
+</html>

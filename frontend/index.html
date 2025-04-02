@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciamento de chefs</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html">Chefs</a>
+        <a href="receitas.html">Receitas</a>
+        <h1>Chefs Cadastrados</h1>
+    </nav>
+
+ 
+    <button id="chefBtn">Adicionar Chef</button>
+
+    <table id="ChefsTable">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Especialidade</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Os chefs serão listados aqui via JS -->
+        </tbody>
+    </table>
+
+    <!-- Modal para adicionar/editar chef -->
+    <div id="ChefModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modalTitle">Adicionar Chef</h2>
+            <form id="ChefForm">
+                <label for="name">Nome:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="especialidade">Especialidade:</label>
+                <input type="text" id="especialidade" name="especialidade" required>
+
+                <label for="password">Senha:</label>
+                <input type="password" id="password" name="password" required>
+
+                <button type="submit" id="saveChefBtn">Salvar</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/chef.js"></script>
+</body>
+</html>
