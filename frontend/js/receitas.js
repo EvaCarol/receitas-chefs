@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const apiUrl = 'process.env.REACT_APP_API_URL;';
+    const apiUrl = 'http://localhost:4000/api/receitas';
     const receitaModal = document.getElementById('receitaModal');
     const receitaForm = document.getElementById('receitaForm');
     const addReceitaBtn = document.getElementById('addReceitaBtn');
