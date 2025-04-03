@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const apiUrl = 'https://receitas-chef-back-1.onrender.com';
+    const apiUrl = 'process.env.REACT_APP_API_URL;';
     const receitaModal = document.getElementById('receitaModal');
     const receitaForm = document.getElementById('receitaForm');
     const addReceitaBtn = document.getElementById('addReceitaBtn');
