@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const apiUrl = 'http://localhost:4000/api/chef';
+    const apiUrl = 'https://receitas-chef-back-1.onrender.com';
     const chefModal = document.getElementById('ChefModal');
     const chefForm = document.getElementById('ChefForm');
     const addChefBtn = document.getElementById('chefBtn');
