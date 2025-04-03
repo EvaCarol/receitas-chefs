@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const apiUrl = 'process.env.REACT_APP_API_URL;';
+    const apiUrl = 'http://localhost:4000/api/chef';
     const chefModal = document.getElementById('ChefModal');
     const chefForm = document.getElementById('ChefForm');
     const addChefBtn = document.getElementById('chefBtn');
