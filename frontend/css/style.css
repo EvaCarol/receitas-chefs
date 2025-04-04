@@ -1,25 +1,26 @@
+/* Estilos para desktop continuam os mesmos */
 body {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     margin: 20px;
     padding: 20px;
     background-color: rgb(253, 235, 207);
+    display: flex;
+    flex-direction: column;
     align-items: center;
 }
 
 h1 {
-    text-align: left;
+    text-align: center;
     font-weight: 100;
-    margin-top: 15px 15px;
-    align-items: center;
-    padding: 10px 10px;
+    margin-top: 15px;
+    padding: 10px;
 }
 
 table {
     width: 80%;
+    max-width: 900px; /* Mantém o tamanho adequado */
     border-collapse: collapse;
     margin: 20px auto;
-    border: 30px;
-    display: table;
 }
 
 table, th, td {
@@ -27,18 +28,17 @@ table, th, td {
 }
 
 th, td {
-    padding: 20px 20px;
+    padding: 15px;
     text-align: center;
 }
 
 button {
-    padding: 20px 15px;
+    padding: 12px 20px;
     background-color: #faa629;
     color: rgb(0, 0, 0);
     border: none;
     cursor: pointer;
-    text-align: center ;
-    margin: 20px 15px;
+    text-align: center;
     border-radius: 35px;
     font-weight: 500;
 }
@@ -47,20 +47,21 @@ button:hover {
     background-color: navajowhite;
 }
 
-/* Menu de navegação */
+/* Menu de navegação responsivo */
 .navbar {
     background-color: #faa629;
     overflow: hidden;
     border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
 }
 
 .navbar a {
-    float: right;
-    display: block;
     color: rgb(41, 39, 39);
     text-align: center;
-    padding: 35px 35px;
-    text-decoration: rgb(41, 39, 39);
+    padding: 15px 20px;
+    text-decoration: none;
     border-radius: 25px;
     font-weight: 400;
 }
@@ -70,49 +71,60 @@ button:hover {
     color: navajowhite;
 }
 
-/* Estilo para o modal */
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-}
-
-.modal-content {
-    background-color: rgb(253, 235, 207);;
-    margin: 15% auto;
-    padding: 20px;
-    width: 80%;
-    border-radius: 35px;
-}
-
-.close {
-    float: right;
-    font-size: 28px;
-    cursor: pointer;
-}
-
 /* Responsividade */
-@media screen and (max-width: 600px) {
-    table, th, td {
+@media screen and (max-width: 768px) {
+    /* Ajustando o layout da tabela para telas menores */
+    table {
+        display: block;
+        width: 100%;
+        border: none;
+    }
+
+    thead {
+        display: none; /* Esconde os cabeçalhos da tabela */
+    }
+
+    tbody {
+        display: block;
+        width: 100%;
+    }
+
+    tr {
+        display: block;
+        border: 2px solid #faa629;
+        margin-bottom: 10px;
+        padding: 10px;
+        background: rgb(255, 245, 225);
+    }
+
+    td {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+        border: none;
+        font-size: 16px;
+    }
+
+    td::before {
+        content: attr(data-label);
+        font-weight: bold;
+    }
+
+    /* Botões menores e ajustáveis */
+    button {
+        padding: 8px 12px;
         font-size: 14px;
     }
 
-    .modal-content {
-        width: 90%;
-    }
-
-    button {
-        padding: 8px 10px;
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
 
     .navbar a {
-        float: none;
         width: 100%;
         text-align: center;
+        padding: 10px;
     }
 }
