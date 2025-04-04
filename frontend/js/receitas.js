@@ -112,7 +112,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Função para carregar chefs no select
     async function loadChefs() {
         try {
-            const response = await fetch('https://receitas-chef-back-1.onrender.com/api/receitas');
+            const response = await fetch('https://receitas-chef-back-1.onrender.com/api/chef');
             const chefs = await response.json();
 
             if (!Array.isArray(chefs)) {
